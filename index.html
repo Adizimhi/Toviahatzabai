@@ -308,71 +308,132 @@
       </div>
     </div>
   </section>
+ <!-- ===== יצירת קשר ===== -->
+<section class="section contact-section" id="contact">
+  <div class="section-inner">
 
-  <!-- ===== יצירת קשר ===== -->
-  <section class="section" id="contact">
-    <div class="section-inner">
-      <div class="divider"></div>
-      <h2 class="section-title">יצירת <span>קשר</span></h2>
-      <p class="section-subtitle">רוצים לחדש את הבית? נשמח לשמוע מכם</p>
+    <div class="divider"></div>
 
-      <div class="contact-grid">
+    <h2 class="section-title">
+      יצירת <span>קשר</span>
+    </h2>
 
-        <div class="contact-info reveal">
-          <p>
-            שלחו הודעת וואטסאפ ונחזור אליכם בהקדם עם הצעת מחיר מפורטת.
-          </p>
-          <ul class="contact-list">
-            <li>
-              <span class="icon">📞</span>
-              <a href="tel:+972539394024">053-939-4024</a>
-            </li>
-            <li>
-              <span class="icon">📱</span>
-              <a href="https://wa.me/972539394024" target="_blank" rel="noopener">וואטסאפ – 053-939-4024</a>
-            </li>
-            <li>
-              <span class="icon">🕐</span>
-              <span>זמין ראשון – שישי, 8:00 – 19:00</span>
-            </li>
-          </ul>
-          <a href="https://wa.me/972539394024" class="btn btn-primary wa-cta" target="_blank" rel="noopener" style="margin-top:1.5rem;display:inline-block;">
-            📱 שליחת הודעת וואטסאפ
-          </a>
+    <p class="section-subtitle">
+      נשמח לשמוע על הפרויקט שלכם ולהעניק הצעת מחיר משתלמת
+    </p>
+
+    <div class="modern-contact-wrapper">
+
+      <!-- צד מידע -->
+      <div class="modern-contact-info reveal">
+
+        <div class="contact-paint-icon">🎨</div>
+
+        <h3>בואו נדבר על הפרויקט</h3>
+
+        <p>
+          אני זמין לכל שאלה והתייעצות.<br>
+          שלחו הודעה בוואטסאפ או מלאו טופס ונחזור אליכם בהקדם.
+        </p>
+
+        <div class="info-box">
+          <span>📞</span>
+          <div>
+            <strong>טלפון</strong>
+            <a href="tel:+972539394024">053-939-4024</a>
+          </div>
         </div>
 
-       <form onsubmit="sendWhatsApp(event)">
-  <label for="name">שם</label>
-  <input id="name" name="name" type="text" required>
+        <div class="info-box">
+          <span>📱</span>
+          <div>
+            <strong>וואטסאפ</strong>
+            <a href="https://wa.me/972539394024" target="_blank">
+              053-939-4024
+            </a>
+          </div>
+        </div>
 
-  <label for="phone">טלפון</label>
-  <input id="phone" name="phone" type="tel" required>
+        <div class="info-box">
+          <span>🕐</span>
+          <div>
+            <strong>שעות פעילות</strong>
+            <p>ראשון - שישי : 08:00 - 19:00</p>
+          </div>
+        </div>
 
-  <label for="subject">נושא</label>
-  <input id="subject" name="subject" type="text" required>
+        <div class="contact-benefits">
+          <div>✔️ מחיר הוגן ומשתלם</div>
+          <div>✔️ עבודה מקצועית ומדויקת</div>
+          <div>✔️ עמידה בזמנים וניקיון בסיום</div>
+        </div>
 
-  <label for="message">הודעה</label>
-  <textarea id="message" name="message" required></textarea>
-
-  <button type="submit">שליחת הודעה ✉️</button>
-</form>
-
-<script>
-  function sendWhatsApp(event) {
-    event.preventDefault();
-
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const subject = document.getElementById("subject").value;
-    const message = document.getElementById("message").value;
-
-    const text = `שם: ${name}%0Aטלפון: ${phone}%0Aנושא: ${subject}%0Aהודעה: ${message}`;
-    window.open(`https://wa.me/972539394024?text=${text}`, "_blank");
-  }
-</script>
       </div>
+
+      <!-- טופס -->
+      <form class="modern-contact-form reveal"
+            onsubmit="sendWhatsApp(event)">
+
+        <div class="form-row">
+
+          <div class="form-group">
+            <label for="name">שם מלא *</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="השם שלך"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">טלפון *</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="050-000-0000"
+              required
+            />
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <label for="subject">נושא הפנייה *</label>
+
+          <select id="subject" required>
+            <option value="">בחר נושא</option>
+            <option>עבודות צבע</option>
+            <option>עבודות גבס</option>
+            <option>שפכטל</option>
+            <option>שיפוץ</option>
+            <option>אחר</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">הודעה *</label>
+
+          <textarea
+            id="message"
+            placeholder="ספרו לי על הפרויקט שלכם..."
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="modern-submit-btn">
+          📨 שליחת הודעה בוואטסאפ
+        </button>
+
+        <small class="secure-note">
+          🔒 הפרטים שלכם נשמרים בצורה מאובטחת
+        </small>
+
+      </form>
+
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- ===== Footer ===== -->
   <footer>
