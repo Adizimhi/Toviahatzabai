@@ -371,7 +371,7 @@
       </div>
 
       <!-- טופס -->
-      <form class="modern-contact-form reveal"
+    <form class="modern-contact-form reveal">
             onsubmit="sendWhatsApp(event)">
 
         <div class="form-row">
@@ -421,9 +421,13 @@
           ></textarea>
         </div>
 
-        <button type="submit" class="modern-submit-btn">
-          📨 שליחת הודעה בוואטסאפ
-        </button>
+ <button
+  type="button"
+  class="modern-submit-btn"
+  onclick="sendWhatsApp(event)"
+>
+  📨 שליחת הודעה בוואטסאפ
+</button>
 
         <small class="secure-note">
           🔒 הפרטים שלכם נשמרים בצורה מאובטחת
@@ -534,6 +538,35 @@
       lightbox.classList.remove('open');
       document.body.style.overflow = '';
     }
+    function sendWhatsApp(event) {
+
+  if(event){
+    event.preventDefault();
+  }
+
+  const name =
+    document.getElementById("name").value;
+
+  const phone =
+    document.getElementById("phone").value;
+
+  const subject =
+    document.getElementById("subject").value;
+
+  const message =
+    document.getElementById("message").value;
+
+  const text =
+`שם: ${name}
+טלפון: ${phone}
+נושא: ${subject}
+הודעה: ${message}`;
+
+  const whatsappLink =
+`https://wa.me/972539394024?text=${encodeURIComponent(text)}`;
+
+  window.location.href = whatsappLink;
+}
   </script>
 </body>
 </html>
